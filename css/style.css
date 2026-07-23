@@ -1,0 +1,101 @@
+/* Cores principais*/
+
+:root {
+  --azul-calro: #7dd3fc;
+  --azul: #38bdf8;
+  --fundo: #f4f4ff;
+  --texto: #334155;
+  --capivara: #b08968;
+}
+
+/* Remove configuração padrão do navegador*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo dapágina */
+body {
+  /*Usa toda a tela*/
+  width: 100vw;
+  height: 100vh;
+
+  /*Cor de fundo*/
+  background: var(--fundo);
+
+  /*Fonte*/
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: var(--texto);
+}
+/* Area principal*/
+
+.container {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+}
+/*Àrea onde ficará a live*/
+.live-panel {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/*Titulo*/
+
+.live-panel h1 {
+  color: var(--azul);
+
+  font-size: 50px;
+}
+
+/*Barra lateral do chat*/
+.chat-panel {
+  width: 350px;
+
+  padding: 20px;
+}
+
+/*Caixa do chat*/
+.chat {
+  height: 100%;
+
+  /*Efeito Vidro */
+
+  background: rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(10px);
+
+  border: 2px solid rgba(125, 211, 252, 0.5);
+
+  border-radius: 25px;
+
+  padding: 20px;
+
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+/*Titulo*/
+
+.chat h2 {
+  color: var(--azul);
+}
+
+.message {
+  background: linear-gradient(135deg, #e0f2fe, #f0fdfa);
+
+  border-left: 5px solid #38bdf8;
+
+  border-radius: 18px;
+
+  padding: 14px;
+
+  margin-bottom: 12px;
+}
