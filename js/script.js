@@ -1,54 +1,37 @@
-// Pegar a area onde as mensagens ser]ao exibidas
+// Área onde as mensagens serão exibidas
+const chatContainer = document.getElementById("chat-messages");
 
-const cghat = document.getElementById("chat-messages");
-
+// Lista de mensagens de teste
 const mensagens = [
   {
-    usuario: "Leandro",
-    texto: "Boa noite"
+    usuario: "🦫 Leandro",
+    texto: "Boa noite!",
   },
-
-    {
-    usuario: "João",
-    texto: "Boa noite"
+  {
+    usuario: "☕ Ana",
+    texto: "Vamos estudar!",
   },
-
-    {
-    usuario: "Júlia",
-    texto: "Boa noite"
+  {
+    usuario: "📚 Carlos",
+    texto: "Foco total!",
   },
+];
 
-] 
+// Cria uma mensagem no chat
+function criarMensagem(usuario, texto) {
+  const message = document.createElement("div");
 
+  message.classList.add("message");
 
-//Funcão que cria uma mensagem
-function criarMensagem(usuario, mensagem) {
-  //Cria uma nova div
-  const novaMensagem = document.createElement("div");
-
-  //Adiciona a classe CSS
-  novaMensagem.classList.add("message");
-
-  //Define o conteudo da mensagem
-  novaMensagem.innerHTML = `
-    <span class="user">${usuario}</span
-    <p>${mensagem}</p>
+  message.innerHTML = `
+        <span class="user">${usuario}</span>
+        <p>${texto}</p>
     `;
 
-  //Adiciona a mensagem ao chat
-  CharacterData.appendChild(novaMensagem);
+  chatContainer.appendChild(message);
 }
 
-//Teste
-
-setTimeout(() => {
-  criarMensagem("Leandro", "Boa noite");
-}, 1000);
-
-setTimeout(() => {
-  criarMensagem("João", "Boa noite");
-}, 2500);
-
-setTimeout(() => {
-  criarMensagem("Júlia", "Boa noite");
-}, 4500);
+// Percorre toda a lista de mensagens
+mensagens.forEach((mensagem) => {
+  criarMensagem(mensagem.usuario, mensagem.texto);
+});
