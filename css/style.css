@@ -112,3 +112,108 @@ body {
 
   margin-bottom: 12px;
 }
+
+/* ===========================
+   ÁREAS DO GRID
+=========================== */
+
+.header {
+  grid-area: header;
+}
+
+.live-panel {
+  grid-area: live;
+}
+
+.chat-panel {
+  grid-area: chat;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header {
+  grid-area: header;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+/* ===========================
+   LIVE
+=========================== */
+
+.live-panel {
+  grid-area: live;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 40px;
+
+  color: #5b7cfd;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+  grid-area: footer;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+.widget {
+  background: rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
